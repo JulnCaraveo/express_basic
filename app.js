@@ -16,7 +16,14 @@ app.get('/node',(req, res) =>{
     res.send([explorer.name,explorer.apellido])
 
 }) 
+//Mandar informacion por la url params
+app.get('/explorer/:explorer',(req, res) =>{
+    console.log(req.params)
+    res.send(req.params)
+
+}) 
 
 app.listen(port,()=>{
     console.log("server listo")
+
 })
